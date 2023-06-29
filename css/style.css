@@ -36,7 +36,7 @@ header {
   flex-wrap: nowrap;
   padding: 10px 20px;
   background-color: #F5F5F5;
-  margin: 10px 5%;
+  margin: 10px 10%;
   border-radius: 20px;
 }
 header h1 {
@@ -84,7 +84,7 @@ header nav ul li a:hover:before, header nav ul li a:hover:after {
 
 .hero-section {
   padding: 100px 15px;
-  margin: 20px 5%;
+  margin: 20px 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -92,7 +92,7 @@ header nav ul li a:hover:before, header nav ul li a:hover:after {
   gap: 30px;
 }
 .hero-section .bg-hero-section {
-  --size: 350px;
+  --size: 400px;
   --speed: 8s;
   --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
   width: var(--size);
@@ -122,7 +122,7 @@ header nav ul li a:hover:before, header nav ul li a:hover:after {
 }
 .hero-section p {
   font-size: 28px;
-  font-weight: 500;
+  font-weight: 400;
   text-align: center;
   color: #333333;
   margin-bottom: 20px;
@@ -164,8 +164,8 @@ header, .hero-section, .about-me {
 }
 
 .about-me {
-  padding: 10px 15px;
-  margin: 20px 5%;
+  padding: 1% 10%;
+  text-align: center;
 }
 .about-me h2 {
   margin: 15px 15px;
@@ -173,42 +173,61 @@ header, .hero-section, .about-me {
   color: #333333;
 }
 .about-me p {
+  padding: 0 8%;
   margin-top: 50px;
   font-size: 18px;
-  width: 60%;
   line-height: 30px;
   color: #333333;
-}
-.about-me svg {
-  position: absolute;
-  width: 20%;
-  top: -250px;
-  right: 150px;
+  font-weight: 300;
 }
 .about-me #tech-title {
-  margin: 50px 0;
+  margin: 100px 0 35px 0;
   font-size: 2rem;
   color: #333333;
 }
 .about-me .card-container {
   display: flex;
   gap: 15px;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 .about-me .card-container .tech-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
   color: #333333;
   position: relative;
   width: 20%;
+  height: 50px;
   text-align: center;
   border: 1px solid rgb(230, 230, 230);
   border-radius: 10px;
   padding: 20px;
   box-shadow: 10px 10px 47px -20px rgba(0, 0, 0, 0.75);
 }
+.about-me .card-container .tech-card svg {
+  margin: 5px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: -30px;
+}
+.about-me .card-container .tech-card:hover {
+  animation: tech-animation 0.6s;
+}
+@keyframes tech-animation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
 
 .proyects {
-  padding: 10px 15px;
-  margin: 70px 5%;
+  padding: 5% 10%;
+  text-align: center;
 }
 .proyects h2 {
   margin: 25px 0;

@@ -47,7 +47,7 @@ header{
     flex-wrap: nowrap;
     padding: 10px 20px;
     background-color: $backgroundColor;
-    margin: 10px 5%;
+    margin: 10px 10%;
     border-radius: 20px;
     
     h1{
@@ -108,7 +108,7 @@ header{
 
 .hero-section{
     padding: 100px 15px;
-    margin: 20px 5%;
+    margin: 20px 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -116,7 +116,7 @@ header{
     gap: 30px;
 
     .bg-hero-section{
-    --size: 350px;
+    --size: 400px;
     --speed: 8s;
     --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
 
@@ -150,7 +150,7 @@ header{
 
     p{
         font-size: 28px;
-        font-weight: 500;
+        font-weight: 400;
         text-align: center;
         color: $textColor;
         margin-bottom: 20px;
@@ -196,10 +196,9 @@ header, .hero-section, .about-me{
     background-attachment: fixed;
 }
 
-
 .about-me{
-    padding: 10px 15px;
-    margin: 20px 5%;
+    padding: 1% 10%;
+    text-align: center;
 
     h2{
         margin: 15px 15px;
@@ -208,22 +207,16 @@ header, .hero-section, .about-me{
     }
 
     p{
+        padding: 0 8%;
         margin-top: 50px;
         font-size: 18px;
-        width: 60%;
         line-height: 30px;
         color: $textColor;
-    }
-
-    svg{
-        position: absolute;
-        width: 20%;
-        top: -250px;
-        right: 150px;
+        font-weight: 300;
     }
 
     #tech-title{
-        margin: 50px 0;
+        margin: 100px 0 35px 0;
         font-size: 2rem;
         color: $textColor;
     }
@@ -231,12 +224,18 @@ header, .hero-section, .about-me{
     .card-container{
         display: flex;
         gap: 15px;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
 
         .tech-card{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
             color: $textColor;
             position: relative;
             width: 20%;
+            height: 50px;
             text-align: center;
             border: 1px solid rgb(230, 230, 230);
             border-radius: 10px;
@@ -244,13 +243,36 @@ header, .hero-section, .about-me{
             -webkit-box-shadow: 10px 10px 47px -20px rgba(0,0,0,0.75);
             -moz-box-shadow: 10px 10px 47px -20px rgba(0,0,0,0.75);
             box-shadow: 10px 10px 47px -20px rgba(0,0,0,0.75);
+
+
+            svg{
+                margin: 5px;
+                height: 50px;
+                width: 50px;
+                position: absolute;
+                top: -30px;
+            }
         }
+
+        .tech-card:hover{
+            animation: tech-animation .6s;
+        }
+
+        @keyframes tech-animation {
+            0%{
+                transform: scale(1)
+            }
+            100%{
+                transform: scale(1.1)
+            }
+        }
+
     }
 }
 
 .proyects{
-    padding: 10px 15px;
-    margin: 70px 5%;
+    padding: 5% 10%;
+    text-align: center;
 
     h2{
         margin: 25px 0;
