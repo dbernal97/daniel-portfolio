@@ -128,7 +128,7 @@ header{
     position: relative;
 
     h1 {
-        font-size: 9rem;
+        font-size: 10rem;
     }
     
     p {
@@ -151,6 +151,7 @@ header{
         background: black;
         color: white;
         position:absolute;
+        right: 80px;
         align-items: center;
         border: solid 1px white;
         letter-spacing: .3em;
@@ -222,7 +223,7 @@ header{
         background: #c9c9c9ae;
         content: "";
         bottom: -50px;
-        right: 20px;
+        right: 60px;
     }
 }
 
@@ -282,51 +283,49 @@ header{
 }
 
 .scrolling-text-container {
-    white-space: nowrap;
-    overflow: hidden;
-    width: 80%;
-    position: relative;
+    padding: 5%;
+    display: flex;
 
-
-    h3{
-        font-size: 3rem;
-        margin-bottom: 30px;
-        border-bottom: 1px solid black;
-        width: 50%;
-        margin-left: auto;
+    p {
+        height: 50px;
+        font-size: 100px;
+        font-weight: 600;
+        margin-right: 0.3em;
+        margin-top: 0px
     }
 
-    img{
-        width: 50px;
+    b {
+        overflow: hidden;
+        position: relative;
+        height: 90px;
+        padding: 5px 0;
     }
 
-    .scrolling-text {
+    span1 {
+        font-size: 90px;
         display: inline-block;
-        font-size: 18px;
-        animation: scroll 7s linear infinite;
+        color: #ab0000;
+        position: relative;
+        white-space: nowrap;
+        top: 0;
+        left: 0;
+        animation: move 8s infinite;
     }
-    
-    .scrolling-text div {
-        padding: 20px;
-        display: inline-block;
-        margin-right: 20px;
-        vertical-align: top;
+
+    @keyframes move {
+        0%  { top: 0px; }
+        14% { top: -96px; }
+        28% { top: -209px; }
+        42% { top: -310px; }
+        56% { top: -425px; }
+        70% { top: -530px; }
+        80% { top: -635px; }
     }
-    
-    .scrolling-text-container:before, .scrolling-text-container:after {
-        content: "";
-        display: inline-block;
-    }
-    
-    @keyframes scroll {
-        0% { transform: translateX(80%); }
-        100% { transform: translateX(-50%); }
-    }
+
 }
 
 .experience{
     margin: 8% 5%;
-    display: flex;
 
     h2{
         font-size: 5rem;
@@ -340,7 +339,85 @@ header{
         font-weight: 300;
         line-height: 25px;
     }
+
+    .carousel-container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .card{
+        width: 300px;
+        height: 425px;
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+        transition: all 0.6s ease;
+    }
+    
+    .card:hover{
+        box-shadow: rgba(255, 172, 28, 0.199) -10px 10px, rgba(255, 172, 28, 0.19) -20px 20px ;
+    }
+    
+    .card .img{
+        height: 40%;
+        background: url("https://cdn.pixabay.com/photo/2015/07/28/20/55/tools-864983_1280.jpg");
+        background-size: cover;
+    }
+    
+    .card .content{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        font-weight: 300;
+    }
+    
+    .card .content h3{
+        width: 200px;
+        font-weight: 300;
+        font-size: 30px;
+        padding-bottom: 5px;
+        border-bottom: 4px solid #FFAC1C;
+    }
+    
+    .card .content p{
+        font-size: 18px;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .card .content a{
+        list-style-type: none;
+        text-decoration: none;
+    }
+    
+    .card .content button{
+        font-family: 'Londrina Solid', cursive;
+        font-weight: 100;
+        font-size: 20px;
+        color: #FFAC1C;
+        width: 100%;
+        height: 45px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        background-color: #ffac1c26;
+        transition: 0.2s ease-in-out;
+    }
+    
+    .card .content button:hover{
+        background-color: #ffac1c3f;
+        cursor: pointer;
+    }
 }
+
+
+
 
 
 footer{
