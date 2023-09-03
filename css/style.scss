@@ -31,7 +31,7 @@ a{
 $backgroundColor: #ebebeb;
 $primaryColor: #2E86C1;
 $accentColor: #E67E22;
-$textColor: #333333;
+$textColor: #2c2c2c;
 
 
 /*
@@ -120,7 +120,7 @@ header{
 }
 
 .hero-section {
-    padding: 10% 5%;
+    padding: 5% 10%;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -129,6 +129,7 @@ header{
 
     h1 {
         font-size: 10rem;
+        color: $textColor;
     }
     
     p {
@@ -151,7 +152,7 @@ header{
         background: black;
         color: white;
         position:absolute;
-        right: 80px;
+        right: 20%;
         align-items: center;
         border: solid 1px white;
         letter-spacing: .3em;
@@ -223,20 +224,23 @@ header{
         background: #c9c9c9ae;
         content: "";
         bottom: -50px;
-        right: 60px;
+        right: 10%;
     }
 }
 
 
 .about-me{
 
-    margin: 8% 5% 0 5%;
+    padding: 5% 10%;
     display: flex;
     align-items: center;
     position: relative;
 
     h2{
-        font-size: 5rem;
+        font-size: 7rem;
+        font-weight: 800;
+        color: $textColor;
+        margin-bottom: 10px;
     }
     p{
         width: 70%;
@@ -245,7 +249,7 @@ header{
         word-spacing: 1px;
         font-size: 17px;
         font-weight: 300;
-        line-height: 25px;
+        line-height: 30px;
     }
 
     img{
@@ -283,15 +287,16 @@ header{
 }
 
 .scrolling-text-container {
-    padding: 5%;
+    padding: 0% 10%;
     display: flex;
 
     p {
         height: 50px;
-        font-size: 100px;
+        font-size: 80px;
         font-weight: 600;
         margin-right: 0.3em;
-        margin-top: 0px
+        margin-top: 0px;
+        color: $textColor
     }
 
     b {
@@ -302,7 +307,7 @@ header{
     }
 
     span1 {
-        font-size: 90px;
+        font-size: 70px;
         display: inline-block;
         color: #ab0000;
         position: relative;
@@ -314,21 +319,22 @@ header{
 
     @keyframes move {
         0%  { top: 0px; }
-        14% { top: -96px; }
-        28% { top: -209px; }
-        42% { top: -310px; }
-        56% { top: -425px; }
-        70% { top: -530px; }
-        80% { top: -635px; }
+        14% { top: -85px; }
+        28% { top: -165px; }
+        42% { top: -245px; }
+        56% { top: -325px; }
+        70% { top: -410px; } // Typescript
+        80% { top: -490px; }
     }
 
 }
 
 .experience{
-    margin: 8% 5%;
+    margin: 10%;
 
     h2{
         font-size: 5rem;
+        color: $textColor;
     }
 
     p{
@@ -418,9 +424,3 @@ header{
 
 
 
-
-
-footer{
-    background:#5d5d5d;
-    height: 100px;
-}
