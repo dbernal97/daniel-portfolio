@@ -1,19 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
-
-
+//@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 /*
 Main config
 */
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+
 }
 
 body{
-    padding-top: 20px;
     scroll-behavior: smooth;
-    background-color: #e6e6e6;
+    background-color: #F9DBBB;
 }
 
 li{
@@ -28,10 +25,10 @@ a{
 /*
     Variable Names
 */
-$backgroundColor: #ebebeb;
+$backgroundColor: #afafaf;
 $primaryColor: #2E86C1;
 $accentColor: #E67E22;
-$textColor: #2c2c2c;
+$textColor: #1d1d1d;
 
 
 /*
@@ -47,9 +44,8 @@ header{
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
-    padding: 10px 20px;
-    background-color: $backgroundColor;
-    margin: 10px 10%;
+    padding: 3% 20px;
+    margin: 10px 10% 0 10%;
     border-radius: 20px;
     
     h1{
@@ -68,8 +64,9 @@ header{
             gap: 40px;
 
             li{
-            
+                
             a{
+                font-size: 18px;
                 color: $textColor;
                 position: relative;
                 z-index: 0;
@@ -108,6 +105,23 @@ header{
     }
 }
 
+.svg-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    font-weight: 400;
+    z-index: -1;
+
+    svg{
+        display: inline-block;
+        height: 100vh;
+    }
+}
+
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(40px);
@@ -124,12 +138,11 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    border-bottom: 0.5px solid gray;
     position: relative;
+    
 
     h1 {
         font-size: 10rem;
-        color: $textColor;
     }
     
     p {
@@ -150,7 +163,7 @@ header{
         display: flex;
         height: 40px;
         background: black;
-        color: white;
+        color: rgb(255, 255, 255);
         position:absolute;
         right: 20%;
         align-items: center;
@@ -221,30 +234,30 @@ header{
         width: 300px;
         height: 400px;
         z-index: -1;
-        background: #c9c9c9ae;
+        background: #c9c9c95d;
         content: "";
         bottom: -50px;
         right: 10%;
     }
 }
 
-
 .about-me{
 
-    padding: 5% 10%;
+    padding: 10%;
     display: flex;
     align-items: center;
     position: relative;
+    
 
     h2{
-        font-size: 7rem;
-        font-weight: 800;
+        font-size: 6rem;
+        font-weight: 500;
         color: $textColor;
         margin-bottom: 10px;
     }
     p{
         width: 70%;
-        margin: 20px 0;
+        margin: 30px 0;
         font-family:'Poppins', sans-serif ;
         word-spacing: 1px;
         font-size: 17px;
@@ -253,45 +266,29 @@ header{
     }
 
     img{
-        width: 300px;
-        height: 200px;
-        padding-right: 20px;
-        /* From https://css.glass */
-        background: rgba(255, 255, 255, 0.12);
-        border-radius: 16px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
+        width: 40%;
+        border: .5px solid black;
+        border-radius: 76% 0% 0% 0% / 75% 25% 25% 25%;
+        background: #F9DBBB;
+    }  
 
-    }
-
-    .line-box{
+    .circle{
         position: absolute;
         z-index: -1;
-        .line:first-child{
-            content: "";
-            background: #acacac30;
-            width: 800px;
-            height: 100px;
-        }
-
-        .line:nth-child(2){
-            content: "";
-            background: #acacac30;
-            width: 500px;
-            height: 100px;
-            margin-top: 15px;
-        }
+        top: 250px;
+        content: "";
+        width: 70%;
+        border: .5px solid black;
     }
 }
 
 .scrolling-text-container {
-    padding: 0% 10%;
+    padding: 3% 10%;
     display: flex;
+    background-color: #F9DBBB;
 
     p {
-        height: 50px;
+        height: 150px;
         font-size: 80px;
         font-weight: 600;
         margin-right: 0.3em;
@@ -329,98 +326,44 @@ header{
 
 }
 
+.scrolling-text-container::before{
+    position: absolute;
+    content: "Desarrollador";
+    width: 10%;
+    z-index: -1;
+    height: 130px;
+    font-size: 170px;
+    color: #c5c5c590;
+}
+
 .experience{
     margin: 10%;
+    background-color: #F9DBBB;
 
     h2{
-        font-size: 5rem;
+        font-size: 6rem;
+        font-weight: 500;
         color: $textColor;
+        margin-bottom: 10px;
     }
 
     p{
         width: 70%;
         margin: 20px 0;
         word-spacing: 1px;
-        font-size: 17px;
+        font-size: 18px;
         font-weight: 300;
         line-height: 25px;
     }
 
-    .carousel-container{
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-
-    .card{
-        width: 300px;
-        height: 425px;
-        background-color: white;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
-        transition: all 0.6s ease;
-    }
-    
-    .card:hover{
-        box-shadow: rgba(255, 172, 28, 0.199) -10px 10px, rgba(255, 172, 28, 0.19) -20px 20px ;
-    }
-    
-    .card .img{
-        height: 40%;
-        background: url("https://cdn.pixabay.com/photo/2015/07/28/20/55/tools-864983_1280.jpg");
-        background-size: cover;
-    }
-    
-    .card .content{
+    .projects-container{
         display: flex;
         flex-direction: column;
-        padding: 20px;
-        font-weight: 300;
-    }
-    
-    .card .content h3{
-        width: 200px;
-        font-weight: 300;
-        font-size: 30px;
-        padding-bottom: 5px;
-        border-bottom: 4px solid #FFAC1C;
-    }
-    
-    .card .content p{
-        font-size: 18px;
-        margin-top: 20px;
-        margin-bottom: 15px;
-    }
-    
-    .card .content a{
-        list-style-type: none;
-        text-decoration: none;
-    }
-    
-    .card .content button{
-        font-family: 'Londrina Solid', cursive;
-        font-weight: 100;
-        font-size: 20px;
-        color: #FFAC1C;
-        width: 100%;
-        height: 45px;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        border: none;
-        border-radius: 5px;
-        background-color: #ffac1c26;
-        transition: 0.2s ease-in-out;
-    }
-    
-    .card .content button:hover{
-        background-color: #ffac1c3f;
-        cursor: pointer;
     }
 }
 
 
-
+footer{
+    background:#F9FAFB;
+    height: 200px;
+}
