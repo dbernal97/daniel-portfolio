@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
 /*
 Main config
 */
@@ -115,11 +116,21 @@ header nav ul li a:hover:before, header nav ul li a:hover:after {
   align-items: flex-start;
   position: relative;
 }
+.hero-section .boxOne {
+  z-index: -1;
+  content: "";
+  background-color: rgba(175, 175, 175, 0.2039215686);
+  height: 800px;
+  width: 800px;
+  position: absolute;
+  border-radius: 50%;
+  left: -100px;
+}
 .hero-section h1 {
   font-size: 10rem;
 }
 .hero-section p {
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 300;
 }
 .hero-section a {
@@ -323,6 +334,31 @@ header nav ul li a:hover:before, header nav ul li a:hover:after {
 }
 
 footer {
-  background: #F9FAFB;
-  height: 200px;
+  background: #e6a17f;
+  height: 70px;
+  padding: 5% 20%;
+  text-align: center;
+}
+footer .links-section {
+  display: flex;
+  justify-content: space-between;
+}
+footer .links-section a {
+  font-size: 25px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  transition: 0.5s;
+}
+footer .links-section a i {
+  color: #171717;
+  margin-left: 3px;
+}
+footer .links-section a:hover {
+  transform: scale(90%);
+  color: #2E86C1;
+}
+footer p {
+  margin-top: 20px;
+  font-size: 18px;
+  border-top: 0.5px solid rgb(41, 41, 41);
+  padding-top: 20px;
 }/*# sourceMappingURL=style.css.map */
